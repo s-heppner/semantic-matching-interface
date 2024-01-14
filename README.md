@@ -4,9 +4,6 @@ This Python library defines an abstract API for semantically matching
 Asset Administration Shell objects. This standardized API should be used, 
 when implementing Semantic Matching Services.
 
-**Note that this is an early Work-in-Progress implementation and everything
-will be very much subject to change!** 
-
 ## How to use
 
 - `interface.py` defines the routes a  

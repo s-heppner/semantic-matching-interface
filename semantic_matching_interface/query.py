@@ -30,35 +30,6 @@ class BaseQuery(BaseModel):
     query_parameters: List[QueryParameter]
 
 
-class AssetAdministrationShellQuery(BaseQuery):
-    """
-    The necessary query parameters for finding the best matching
-    `AssetAdministrationShells` within the server's repository of AASs.
-
-    :cvar return_matches: How many matches the semantic matching service
-        should return
-    :cvar query_parameters: List of `QueryParameter`s
-    """
-    pass
-
-
-class SubmodelElementQuery(BaseQuery):
-    """
-    The necessary query parameters for finding the best matching
-    `SubmodelElement`s in a given `AssetAdministrationShell`
-
-    :cvar return_matches: How many matches the semantic matching service
-        should return
-    :cvar query_parameters: List of `QueryParameter`s.
-    :cvar aas_identifier_id: The `id`-field of a JSON-serialized AAS
-        `Identifier`-object.
-    :cvar aas_identifier_id_type: The `idType`-field of a JSON-serialized
-        AAS `Identifier`-object.
-    """
-    aas_identifier_id: str
-    aas_identifier_id_type: str
-
-
 class MatchObjectsQuery(BaseModel):
     """
     The necessary query parameters for matching two `SubmodelElement` objects
